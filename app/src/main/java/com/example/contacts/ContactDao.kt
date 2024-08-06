@@ -13,7 +13,7 @@ interface ContactDao {
     fun getContactById(id: Long): Contact?
 
     @Query(value = "SELECT * FROM contact ORDER BY :sortType ASC")
-    fun getContactOrderByFirstName(sortType: SortType): Flow<List<Contact>>
+    fun getContactOrderBySortType(sortType: SortType): Flow<List<Contact>>
 
     @Delete
     fun deleteContact(contact: Contact)
