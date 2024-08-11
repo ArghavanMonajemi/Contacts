@@ -64,7 +64,9 @@ fun ContactScreen(
             }
             items(state.contacts) { contact ->
                 Row(
-                    modifier = Modifier.fillParentMaxWidth(),
+                    modifier = Modifier
+                        .fillParentMaxWidth()
+                        .padding(10.dp),
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
